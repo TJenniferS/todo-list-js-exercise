@@ -12,7 +12,11 @@ function newTask(title, description) {
       this.complete = true;
     }
   };
-  return task;
+
+  // Creating a new object that inherits from the task object
+  const newTaskObject = Object.create(task);
+
+  return newTaskObject;
 }
 
 const task1 = newTask("Clean Cat Litter", "Take all the 💩 out of the litter box");
