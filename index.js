@@ -5,7 +5,7 @@ function newTask(title, description) {
     complete: false,
 
     logState: function() {
-      console.log(`${this.title}: • ${this.description} → has${this.complete ? " " : " not "}been completed`);
+      console.log(`• ${this.title}: → has${this.complete ? " " : " \x1b[33mnot\x1b[0m "}been completed`);
     },
 
     markCompleted: function() {
